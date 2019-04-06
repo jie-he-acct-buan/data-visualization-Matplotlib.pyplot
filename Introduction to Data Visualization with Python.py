@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 28 02:03:52 2019
-
-@author: Jie
-"""
 import numpy as np
 import pandas as pd
 from sqlalchemy import create_engine, MetaData, Table, select, and_, or_, desc, func, case, cast, Float
@@ -15,7 +9,7 @@ pd.set_option('display.max_columns', 10000)
 pd.set_option('display.max_colwidth', 1000)
 pd.set_option('display.width', None)
 ##############################################################################
-women_degree = pd.read_csv('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/percent-bachelors-degrees-women-usa.csv')
+women_degree = pd.read_csv('percent-bachelors-degrees-women-usa.csv')
 
 physical_sciences = women_degree['Physical Sciences'].values
 computer_science = women_degree['Computer Science'].values
@@ -120,7 +114,7 @@ plt.title('Degrees awarded to women (1990-2010)\nComputer Science (red)\nPhysica
 plt.show()
 
 # Save the image as 'xlim_and_ylim.png'
-plt.savefig('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/xlim_and_ylim.png')
+plt.savefig('xlim_and_ylim.png')
 ##############################################################################
 # Plot in blue the % of degrees awarded to women in Computer Science
 plt.plot(year,computer_science, color='blue')
@@ -237,7 +231,7 @@ plt.tight_layout()
 plt.show()
 
 ##############################################################################
-auto = pd.read_csv('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/auto-mpg.csv')
+auto = pd.read_csv('auto-mpg.csv')
 mpg = auto.mpg.values
 hp = auto.hp.values
 
@@ -270,7 +264,7 @@ plt.show()
 
 ##############################################################################
 # Load the image into an array: img
-img = plt.imread('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/480px-Astronaut-EVA.jpg')
+img = plt.imread('480px-Astronaut-EVA.jpg')
 
 # Print the shape of the image
 print(img.shape)
@@ -336,7 +330,7 @@ plt.tight_layout()
 plt.show()
 ##############################################################################
 # Load the image into an array: image
-image = plt.imread('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/640px-Unequalized_Hawkes_Bay_NZ.jpg').sum(axis=2)
+image = plt.imread('640px-Unequalized_Hawkes_Bay_NZ.jpg').sum(axis=2)
 
 # Extract minimum and maximum values from the image: pmin, pmax
 pmin, pmax = image.min(), image.max()
@@ -361,7 +355,7 @@ plt.imshow(rescaled_image)
 plt.show()
 
 ##############################################################################
-auto = pd.read_csv('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/auto-mpg.csv')
+auto = pd.read_csv('auto-mpg.csv')
 mpg = auto.mpg.values
 hp = auto.hp.values
 weight = auto.weight.values
@@ -499,7 +493,7 @@ sns.heatmap(corr_matrix)
 plt.show()
 
 ##############################################################################
-stocks = pd.read_csv('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/stocks.csv', parse_dates=True, index_col='Date')
+stocks = pd.read_csv('stocks.csv', parse_dates=True, index_col='Date')
 aapl = stocks.AAPL
 ibm = stocks.IBM
 csco = stocks.CSCO
@@ -653,7 +647,7 @@ plt.show()
 
 ##############################################################################
 # Load the image into an array: image
-image = plt.imread('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/640px-Unequalized_Hawkes_Bay_NZ.jpg').sum(axis=2)
+image = plt.imread('640px-Unequalized_Hawkes_Bay_NZ.jpg').sum(axis=2)
 
 # Display image in top subplot using color map 'gray'
 plt.subplot(2,1,1)
@@ -730,7 +724,7 @@ cdf = plt.hist(new_pixels, bins=64, range=(0,760), cumulative=True, normed=True,
 plt.show()
 
 ##############################################################################
-image = plt.imread('F:/0 - PhD at UTD/2019 Spring/DataCamp/Introduction to Data Visualization with Python/hs-2004-32-b-small_web.jpg')
+image = plt.imread('hs-2004-32-b-small_web.jpg')
 
 # Display image in top subplot
 plt.subplot(2,1,1)
